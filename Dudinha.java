@@ -12,7 +12,27 @@ public class Dudinha {
     private TableView<?> tabela;
 
     @FXML
+    void mostrarCardapioQuarta(ActionEvent event) {
+
+    }
+
+    @FXML
+    void mostrarCardapioQuinta(ActionEvent event) {
+
+    }
+
+    @FXML
     void mostrarCardapioSegunda(ActionEvent event) {
+
+    }
+
+    @FXML
+    void mostrarCardapioSexta(ActionEvent event) {
+
+    }
+
+    @FXML
+    void mostrarCardapioTerça(ActionEvent event) {
 
     }
 
