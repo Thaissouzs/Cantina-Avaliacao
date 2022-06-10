@@ -1,0 +1,14 @@
+.btn button{
+    border: 1px solid  #000000;
+    width: 100px;
+    height: 50px;
+    background-color: #EA1D2C;
+    color: #f0f8ff;
+    margin-right: 50px;
+}.btn{
+    margin-top: 10px;
+    margin-left: 380px;
+}
+body{ 
+    background: linear-gradient(90deg, rgb(36, 0, 0) 0%, rgb(180, 19, 19) 35%, rgb(255, 0, 0) 100%); 
+}
