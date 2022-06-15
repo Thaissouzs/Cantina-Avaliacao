@@ -6,34 +6,48 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.Restricoes">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffebeb;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.Restricoes">
    <children>
       <Label layoutX="163.0" layoutY="31.0" prefHeight="84.0" prefWidth="275.0" text="Restrições">
          <font>
             <Font size="61.0" />
          </font>
       </Label>
-      <Button fx:id="voltarMenu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarParaMenu" prefHeight="33.0" prefWidth="84.0" text="Menu" />
+      <Button fx:id="voltarInicio" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarParaInicio" prefHeight="33.0" prefWidth="84.0" style="-fx-background-radius: 30px; -fx-background-color: #EA1D2C;" text="Inicio" textFill="WHITE" />
       <Label layoutX="184.0" layoutY="150.0" prefHeight="33.0" prefWidth="71.0" text="Usuario">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="nomeUsuario" layoutX="257.0" layoutY="154.0" promptText="Digite seu nome" />
-      <RadioButton fx:id="primeiroAno" layoutX="163.0" layoutY="192.0" mnemonicParsing="false" text="1° ano" />
-      <RadioButton fx:id="segundoAno" layoutX="255.0" layoutY="192.0" mnemonicParsing="false" text="2°ano" />
-      <RadioButton fx:id="terceiroAno" layoutX="348.0" layoutY="192.0" mnemonicParsing="false" text="3°ano" />
-      <RadioButton fx:id="informatica" layoutX="163.0" layoutY="223.0" mnemonicParsing="false" text="Informatica" />
-      <RadioButton fx:id="enfermagem" layoutX="256.0" layoutY="223.0" mnemonicParsing="false" text="Enfermagem" />
-      <RadioButton fx:id="guia" layoutX="351.0" layoutY="223.0" mnemonicParsing="false" text="Guia" />
+      <TextField fx:id="nomeUsuario" layoutX="257.0" layoutY="154.0" promptText="Digite seu nome" style="-fx-background-radius: 10px;" />
+      <RadioButton fx:id="primeiroAno" layoutX="163.0" layoutY="192.0" mnemonicParsing="false" text="1° ano">
+         <toggleGroup>
+            <ToggleGroup fx:id="serie" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="segundoAno" layoutX="255.0" layoutY="192.0" mnemonicParsing="false" text="2°ano" toggleGroup="$serie" />
+      <RadioButton fx:id="terceiroAno" layoutX="348.0" layoutY="192.0" mnemonicParsing="false" text="3°ano" toggleGroup="$serie" />
+      <RadioButton fx:id="informatica" layoutX="163.0" layoutY="223.0" mnemonicParsing="false" text="Informatica">
+         <toggleGroup>
+            <ToggleGroup fx:id="turma" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="enfermagem" layoutX="256.0" layoutY="223.0" mnemonicParsing="false" text="Enfermagem" toggleGroup="$turma" />
+      <RadioButton fx:id="guia" layoutX="351.0" layoutY="223.0" mnemonicParsing="false" text="Guia" toggleGroup="$turma" />
       <TextArea fx:id="restricaoAlimentar" layoutX="150.0" layoutY="252.0" prefHeight="56.0" prefWidth="300.0" promptText="informe sua restrição alimentar">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextArea>
-      <Button fx:id="btnEnviar" layoutX="256.0" layoutY="324.0" mnemonicParsing="false" onAction="#enviarRelatorio" prefHeight="33.0" prefWidth="89.0" text="Enviar" />
+      <Button fx:id="btnEnviar" layoutX="256.0" layoutY="324.0" mnemonicParsing="false" onAction="#enviarRelatorio" prefHeight="33.0" prefWidth="89.0" style="-fx-background-color: #EA1D2C; -fx-background-radius: 30px;" text="Enviar" textFill="WHITE" />
+      <Button fx:id="voltarCardapio" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" onAction="#voltarParaCardapio" prefHeight="33.0" prefWidth="84.0" style="-fx-background-radius: 30px; -fx-background-color: #EA1D2C;" text="Cardapio" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="voltarRodizio" layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#voltarParaRodizio" prefHeight="33.0" prefWidth="84.0" style="-fx-background-radius: 30px; -fx-background-color: #EA1D2C;" text="Rodizio" textFill="WHITE" />
+      <Button fx:id="voltarAvaliacao" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" onAction="#voltarParaAvaliacao" prefHeight="33.0" prefWidth="84.0" style="-fx-background-radius: 30px; -fx-background-color: #EA1D2C;" text="Avaliação" textFill="WHITE" />
    </children>
 </AnchorPane>
