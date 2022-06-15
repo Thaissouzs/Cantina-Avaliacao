@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffebeb;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.Restricoes">
+   <children>
+      <Label layoutX="163.0" layoutY="31.0" prefHeight="84.0" prefWidth="275.0" text="Restrições">
+         <font>
+            <Font size="61.0" />
+         </font>
+      </Label>
+      <Button fx:id="voltarMenu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarParaMenu" prefHeight="33.0" prefWidth="84.0" style="-fx-background-radius: 30px; -fx-background-color: #EA1D2C;" text="Voltar" textFill="WHITE" />
+      <Label layoutX="184.0" layoutY="150.0" prefHeight="33.0" prefWidth="71.0" text="Usuario">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomeUsuario" layoutX="257.0" layoutY="154.0" promptText="Digite seu nome" style="-fx-background-radius: 10px;" />
+      <RadioButton fx:id="primeiroAno" layoutX="163.0" layoutY="192.0" mnemonicParsing="false" text="1° ano" />
+      <RadioButton fx:id="segundoAno" layoutX="255.0" layoutY="192.0" mnemonicParsing="false" text="2°ano" />
+      <RadioButton fx:id="terceiroAno" layoutX="348.0" layoutY="192.0" mnemonicParsing="false" text="3°ano" />
+      <RadioButton fx:id="informatica" layoutX="163.0" layoutY="223.0" mnemonicParsing="false" text="Informatica" />
+      <RadioButton fx:id="enfermagem" layoutX="256.0" layoutY="223.0" mnemonicParsing="false" text="Enfermagem" />
+      <RadioButton fx:id="guia" layoutX="351.0" layoutY="223.0" mnemonicParsing="false" text="Guia" />
+      <TextArea fx:id="restricaoAlimentar" layoutX="150.0" layoutY="252.0" prefHeight="56.0" prefWidth="300.0" promptText="informe sua restrição alimentar">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextArea>
+      <Button fx:id="btnEnviar" layoutX="256.0" layoutY="324.0" mnemonicParsing="false" onAction="#enviarRelatorio" prefHeight="33.0" prefWidth="89.0" style="-fx-background-color: #EA1D2C; -fx-background-radius: 30px;" text="Enviar" textFill="WHITE" />
+   </children>
+</AnchorPane>
