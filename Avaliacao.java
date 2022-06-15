@@ -6,17 +6,37 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class Avaliacao {
 
     private Parent root;
     private Stage tela;
-    private Scene cena;    
+    private Scene cena; 
 
     @FXML
-    private Button voltarMenu;
+    private Button btnEnviar;
+
+    @FXML
+    private Button btnEnviar1;
+
+    @FXML
+    private Button btnEnviar2;
+
+    @FXML
+    private Button btnEnviar3;
+
+    @FXML
+    private Button btnVoltar;
+
+    @FXML
+    private TextArea campoDeTexto;
+
+    Alert msg = new Alert(AlertType.NONE);
 
     private void abrirTela(ActionEvent evento, String arquivo, String css) throws Exception{
         // Coloca arquivo na memória para carregar
@@ -31,9 +51,45 @@ public class Avaliacao {
         // Mostra a tela
         tela.show();
     }
+    @FXML
+    void enviarInformação(ActionEvent event) {
+        if(campoDeTexto.getText().equals("")){
+            msg.setAlertType(AlertType.ERROR);
+            msg.setTitle("DEU ERRO");
+            msg.setHeaderText("Os requisitos não foram preenchidos corretamente");
+            msg.show();
+        }else{
+            msg.setAlertType(AlertType.CONFIRMATION);
+            msg.setHeaderText("Sua avaliação foi resistrada");
+            msg.show();
+        }
+        
+
+    }
 
     @FXML
-    void VotarParaMenu(ActionEvent event) throws Exception{
+    void irParaCardapio(ActionEvent event) throws Exception{
+
+        abrirTela(event, "Cardapio.fxml", "Fundo.css");
+
+    }
+
+    @FXML
+    void irParaRestricoes(ActionEvent event) throws Exception{
+
+        abrirTela(event, "Restricoes.fxml", "Fundo.css");
+
+    }
+
+    @FXML
+    void irParaRodizio(ActionEvent event) throws Exception{
+
+        abrirTela(event, "Rodizio.fxml", "Fundo.css");
+
+    }
+
+    @FXML
+    void voltarParaMenu(ActionEvent event) throws Exception{
 
         abrirTela(event, "Menu.fxml", "Fundo.css");
 
