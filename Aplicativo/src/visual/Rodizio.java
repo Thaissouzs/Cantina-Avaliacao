@@ -25,6 +25,14 @@ public class Rodizio implements Initializable {
     private Stage tela;
     private Scene cena; 
 
+    @FXML
+    private Button btnAvaliacao;
+
+    @FXML
+    private Button btnCardapio;
+
+    @FXML
+    private Button btnRestricao;
 
      @FXML
     private Button btnvoltar;
@@ -72,8 +80,15 @@ public class Rodizio implements Initializable {
     }
     private ObservableList<Salas> criarLista(){
         return FXCollections.observableArrayList(
-            new Salas("1 infor", "", "", "", "" )
-            
+            new Salas("1 Enfer", "2 Infor", "3 Guia", "1 Guia", "2 Guia" ),
+            new Salas("1 Guia", "2 Enfer", "3 Infor", "1 Infor", "2 Infor"),
+            new Salas("1 Infor", "2 Guia", "3 Enfer", "1 Enfer", "2 Enfer"),
+            new Salas("2 Enfer", "3 Infor", "1 Guia", "2 Guia", "1 Guia" ),
+            new Salas("2 Guia", "3 Enfer", "1 Infor", "2 Infor", "1 Infor"),
+            new Salas("2 Infor", "3 Guia", "1 Enfer", "2 Enfer", "1 Enfer" ),
+            new Salas("3 Enfer", "1 Infor", "2 Guia", "3 Guia", "3 Guia"),
+            new Salas("3 Guia", "1 Enfer", "2 Infor", "3 Infor", "3 Infor" ),
+            new Salas("3 Infor", "1 Guia", "2 Enfer", "3 Enfer", "3 Enfer")
         );
     }
 
@@ -81,6 +96,25 @@ public class Rodizio implements Initializable {
     void voltarMenu(ActionEvent event) throws Exception{
 
         abrirTela(event, "Menu.fxml", "Fundo.css");
+
+    }
+    @FXML
+    void voltarAvaliacao(ActionEvent event) throws Exception{
+
+        abrirTela(event, "Avaliacao.fxml", "Fundo.css");
+
+    }
+    @FXML
+    void voltarCardapio(ActionEvent event) throws Exception{
+
+        abrirTela(event, "Cardapio.fxml", "Fundo.css");
+
+    }
+
+    @FXML
+    void voltarRestricao(ActionEvent event) throws Exception{
+
+        abrirTela(event, "Restricoes.fxml", "Fundo.css");
 
     }
 
