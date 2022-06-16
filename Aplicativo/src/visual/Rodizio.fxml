@@ -29,9 +29,12 @@
             <TableColumn fx:id="sexta" prefWidth="109.0" text="Sexta" />
          </columns>
       </TableView>
-      <Button fx:id="btnvoltar" layoutX="491.0" layoutY="361.0" mnemonicParsing="false" onAction="#voltarMenu" prefHeight="25.0" prefWidth="72.0" style="-fx-background-radius: 30px; -fx-background-color: #EA1D2C;" text="voltar" textFill="#f2ecec">
+      <Button fx:id="btnvoltar" layoutX="214.0" layoutY="38.0" mnemonicParsing="false" onAction="#voltarMenu" prefHeight="25.0" prefWidth="72.0" style="-fx-background-radius: 30px; -fx-background-color: #EA1D2C;" text="Inicio" textFill="#f2ecec">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
+      <Button fx:id="btnCardapio" layoutX="308.0" layoutY="38.0" mnemonicParsing="false" onAction="#voltarCardapio" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #EA1D2C; -fx-background-radius: 30px;" text="Cardapio" textFill="WHITE" />
+      <Button fx:id="btnAvaliacao" layoutX="399.0" layoutY="38.0" mnemonicParsing="false" onAction="#voltarAvaliacao" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #EA1D2C; -fx-background-radius: 30px;" text="Avaliação" textFill="WHITE" />
+      <Button fx:id="btnRestricao" layoutX="491.0" layoutY="38.0" mnemonicParsing="false" onAction="#voltarRestricao" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #EA1D2C; -fx-background-radius: 30px;" text="Restrições" textFill="WHITE" />
    </children>
 </AnchorPane>
